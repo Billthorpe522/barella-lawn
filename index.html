@@ -191,14 +191,21 @@
   @media (max-width: 720px) { .about-grid { grid-template-columns: 1fr; } }
   .portrait {
     width: 100%; aspect-ratio: 1 / 1;
-    background: var(--grass) center/cover no-repeat;
+    background: var(--bone) center/contain no-repeat;
+    background-image: url('photos/logo.png');
     border: 4px solid #fff;
     box-shadow: var(--shadow-2);
-    display: flex; align-items: center; justify-content: center;
-    color: rgba(255,255,255,0.7);
-    font-size: 14px; letter-spacing: 0.1em; text-transform: uppercase;
+    display: flex; align-items: flex-end; justify-content: center;
+    padding-bottom: 16px;
+    color: var(--steel);
+    font-size: 12px; letter-spacing: 0.08em; text-transform: uppercase;
+    font-weight: 600;
   }
-  .portrait.has-photo { color: transparent; }
+  .portrait.has-photo {
+    background-image: url('photos/blake.jpg');
+    background-size: cover;
+    color: transparent;
+  }
   .about h3 {
     margin: 0 0 12px;
     font-size: 26px; font-weight: 800; color: var(--ink);
@@ -313,10 +320,22 @@
   footer.foot {
     background: var(--ink);
     color: #a8b3a8;
-    padding: 28px 22px;
+    padding: 36px 22px 28px;
     text-align: center;
     font-size: 13px;
     line-height: 1.5;
+  }
+  footer.foot .footer-logo {
+    width: 64px; height: 64px;
+    margin: 0 auto 18px;
+    background: #fff;
+    padding: 6px;
+    border-radius: 4px;
+    background-image: url('photos/logo.png');
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: #fff;
   }
   footer.foot a { color: var(--grass-2); text-decoration: none; }
   footer.foot a:hover { color: var(--clay); }
@@ -405,8 +424,13 @@
       <h2>Your neighbor, doing this the right way.</h2>
     </header>
     <div class="about-grid">
-      <div class="portrait" id="portrait">
-        <span>Photo coming soon</span>
+      <div>
+        <div class="portrait" id="portrait">
+          <span>Photo coming soon</span>
+        </div>
+        <p style="text-align: center; margin: 10px 0 0; font-size: 11px; color: var(--steel); text-transform: uppercase; letter-spacing: 0.1em; font-weight: 600;">
+          Your neighbor · Blake
+        </p>
       </div>
       <div>
         <p>
@@ -495,9 +519,10 @@
 
 <!-- ───── Footer ───── -->
 <footer class="foot">
+  <div class="footer-logo" role="img" aria-label="Barella Lawn &amp; Landscaping logo"></div>
   <p>
     <strong>Barella Lawn &amp; Landscaping</strong> · Blake Barella<br>
-    <a href="tel:+18159093394">(815) 909-3394</a><br><br>
+    <a href="tel:+181****3394">(815) 909-3394</a><br><br>
     Local lawn care &amp; landscaping · Weekly service, mulch, rock, bush &amp; hedge trimming<br>
     Free estimates · Fair prices · Reliable
   </p>
