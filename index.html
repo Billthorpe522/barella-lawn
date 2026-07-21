@@ -1,0 +1,589 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<meta name="theme-color" content="#2f6b3a">
+<title>Barella Lawn & Landscaping · Blake Barella · Call or text (815) 909-3394</title>
+<meta name="description" content="Local lawn care and landscaping in your neighborhood. Weekly lawn service, mulch, rock, bush & hedge trimming. Call or text Blake at (815) 909-3394 for a free estimate.">
+<meta property="og:title" content="Barella Lawn & Landscaping">
+<meta property="og:description" content="Local lawn care and landscaping. Weekly lawn service, mulch, rock, bush & hedge trimming. Call or text Blake at (815) 909-3394 for a free estimate.">
+<meta property="og:type" content="business.business">
+<style>
+  /* ───── Lawn & landscaping palette — fresh green / clay accent ───── */
+  :root {
+    --grass:       #2f6b3a;   /* deep grass green */
+    --grass-2:     #3e8a4a;   /* mid grass */
+    --grass-soft:  #e3efe1;   /* light grass bg */
+    --clay:        #c47a3a;   /* terracotta clay accent */
+    --clay-soft:   #f3e3d3;
+    --bark:        #5a3d28;   /* dark wood / mulch */
+    --ink:         #1d2b1f;
+    --steel:       #4a594a;
+    --bone:        #fbfaf6;
+    --line:        #d8dccf;
+    --shadow-1:    0 2px 8px rgba(29,43,31,0.06);
+    --shadow-2:    0 14px 36px rgba(29,43,31,0.14);
+  }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; padding: 0; }
+  body {
+    background: var(--bone);
+    color: var(--ink);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", system-ui, "Helvetica Neue", Arial, sans-serif;
+    font-size: 17px;
+    line-height: 1.55;
+    -webkit-font-smoothing: antialiased;
+  }
+  /* ───── Layout ───── */
+  .wrap { max-width: 880px; margin: 0 auto; padding: 0 22px 80px; }
+  section { padding: 56px 0; border-bottom: 1px solid var(--line); }
+  section:last-of-type { border-bottom: 0; }
+
+  /* ───── Header ───── */
+  header.top {
+    background: var(--grass);
+    color: var(--white, #fff);
+    padding: 18px 22px;
+    border-bottom: 4px solid var(--clay);
+  }
+  header.top .inner {
+    max-width: 880px; margin: 0 auto;
+    display: flex; align-items: center; gap: 14px;
+  }
+  header.top .mark {
+    width: 44px; height: 44px;
+    background: rgba(255,255,255,0.18);
+    display: flex; align-items: center; justify-content: center;
+    flex-shrink: 0;
+  }
+  header.top .name {
+    font-size: 15px; font-weight: 700;
+    letter-spacing: 0.04em; line-height: 1.2;
+    text-transform: uppercase;
+  }
+  header.top .name small {
+    display: block; font-size: 11px;
+    letter-spacing: 0.12em; font-weight: 400;
+    opacity: 0.85; margin-top: 2px;
+  }
+
+  /* ───── Hero ───── */
+  .hero {
+    background:
+      linear-gradient(180deg, var(--grass-soft) 0%, var(--bone) 100%);
+    padding: 64px 22px 56px;
+    text-align: center;
+  }
+  .hero-inner { max-width: 720px; margin: 0 auto; }
+  .hero .eyebrow {
+    display: inline-block;
+    background: var(--grass); color: #fff;
+    padding: 6px 14px;
+    font-size: 11px; letter-spacing: 0.16em;
+    text-transform: uppercase; font-weight: 700;
+    margin-bottom: 20px;
+  }
+  .hero h1 {
+    margin: 0 0 16px;
+    font-size: 44px; line-height: 1.1; font-weight: 800;
+    color: var(--ink); letter-spacing: -0.02em;
+  }
+  .hero h1 em {
+    font-style: normal;
+    color: var(--grass);
+  }
+  .hero p.lead {
+    margin: 0 auto 28px;
+    font-size: 18px; color: var(--steel);
+    max-width: 580px;
+  }
+  .hero .actions {
+    display: flex; gap: 12px; justify-content: center; flex-wrap: wrap;
+  }
+  .cta {
+    display: inline-flex; align-items: center; gap: 8px;
+    background: var(--grass); color: #fff;
+    padding: 16px 26px;
+    font-size: 15px; font-weight: 700;
+    text-decoration: none;
+    border: 0; border-radius: 0;
+    transition: background 160ms, transform 80ms;
+    letter-spacing: 0.04em;
+  }
+  .cta:hover { background: var(--grass-2); }
+  .cta:active { transform: scale(0.97); }
+  .cta.clay { background: var(--clay); }
+  .cta.clay:hover { background: #a9672e; }
+  .cta.outline {
+    background: transparent; color: var(--grass);
+    border: 2px solid var(--grass);
+  }
+  .cta.outline:hover { background: var(--grass); color: #fff; }
+
+  /* ───── Section headers ───── */
+  .sec-h { margin: 0 0 32px; text-align: center; }
+  .sec-h .eyebrow {
+    display: inline-block;
+    font-size: 11px; letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--grass); font-weight: 700;
+    margin-bottom: 10px;
+  }
+  .sec-h h2 {
+    margin: 0 0 12px;
+    font-size: 32px; line-height: 1.15;
+    font-weight: 800; letter-spacing: -0.01em;
+    color: var(--ink);
+  }
+  .sec-h p {
+    margin: 0 auto; max-width: 560px;
+    font-size: 16px; color: var(--steel);
+  }
+
+  /* ───── Services ───── */
+  .services-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+  }
+  @media (max-width: 540px) { .services-grid { grid-template-columns: 1fr; } }
+  .service {
+    background: #fff;
+    border: 1px solid var(--line);
+    border-left: 4px solid var(--grass);
+    padding: 22px 22px 20px;
+    box-shadow: var(--shadow-1);
+    transition: transform 160ms, box-shadow 160ms;
+  }
+  .service:hover { transform: translateY(-2px); box-shadow: var(--shadow-2); }
+  .service h3 {
+    margin: 0 0 8px;
+    font-size: 18px; font-weight: 700;
+    color: var(--ink);
+    display: flex; align-items: center; gap: 10px;
+  }
+  .service .check {
+    background: var(--grass);
+    color: #fff;
+    width: 22px; height: 22px;
+    display: inline-flex; align-items: center; justify-content: center;
+    flex-shrink: 0;
+    font-size: 13px;
+  }
+  .service p {
+    margin: 0; font-size: 14.5px;
+    color: var(--steel);
+  }
+
+  /* ───── About ───── */
+  .about {
+    background: var(--grass-soft);
+    margin: 56px calc(50% - 50vw) 0;
+    padding: 56px 22px;
+  }
+  .about-inner { max-width: 880px; margin: 0 auto; }
+  .about-grid {
+    display: grid; grid-template-columns: 1fr 1.4fr; gap: 36px;
+    align-items: center;
+  }
+  @media (max-width: 720px) { .about-grid { grid-template-columns: 1fr; } }
+  .portrait {
+    width: 100%; aspect-ratio: 1 / 1;
+    background: var(--grass) center/cover no-repeat;
+    border: 4px solid #fff;
+    box-shadow: var(--shadow-2);
+    display: flex; align-items: center; justify-content: center;
+    color: rgba(255,255,255,0.7);
+    font-size: 14px; letter-spacing: 0.1em; text-transform: uppercase;
+  }
+  .portrait.has-photo { color: transparent; }
+  .about h3 {
+    margin: 0 0 12px;
+    font-size: 26px; font-weight: 800; color: var(--ink);
+  }
+  .about p { margin: 0 0 14px; font-size: 16px; color: var(--steel); }
+  .about .pill {
+    display: inline-block;
+    background: var(--clay); color: #fff;
+    padding: 4px 10px;
+    font-size: 11px; letter-spacing: 0.1em;
+    text-transform: uppercase; font-weight: 700;
+    margin-right: 6px;
+  }
+
+  /* ───── Photo gallery ───── */
+  .gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+  }
+  @media (max-width: 540px) { .gallery { grid-template-columns: repeat(2, 1fr); } }
+  .photo {
+    aspect-ratio: 4 / 3;
+    background: var(--grass-soft) center/cover no-repeat;
+    border: 1px solid var(--line);
+    position: relative;
+    overflow: hidden;
+  }
+  .photo.placeholder {
+    background: linear-gradient(135deg, var(--grass-soft), var(--clay-soft));
+    display: flex; align-items: center; justify-content: center;
+    color: var(--steel); font-size: 11px;
+    letter-spacing: 0.08em; text-transform: uppercase;
+    font-weight: 600;
+  }
+  .photo.placeholder::before {
+    content: "📷"; font-size: 22px;
+    margin-right: 6px;
+  }
+  .photo .cap {
+    position: absolute; bottom: 0; left: 0; right: 0;
+    background: linear-gradient(0deg, rgba(29,43,31,0.85), transparent);
+    color: #fff; padding: 14px 12px 8px;
+    font-size: 12px; font-weight: 600;
+    letter-spacing: 0.04em;
+    opacity: 0; transition: opacity 200ms;
+  }
+  .photo:not(.placeholder):hover .cap { opacity: 1; }
+
+  /* ───── How it works ───── */
+  .steps {
+    display: grid; grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+  }
+  @media (max-width: 720px) { .steps { grid-template-columns: 1fr; } }
+  .step {
+    text-align: center;
+    padding: 20px 16px;
+  }
+  .step .num {
+    display: inline-flex; align-items: center; justify-content: center;
+    width: 44px; height: 44px;
+    background: var(--clay); color: #fff;
+    font-weight: 800; font-size: 20px;
+    margin-bottom: 14px;
+  }
+  .step h4 {
+    margin: 0 0 8px; font-size: 17px; font-weight: 700;
+    color: var(--ink);
+  }
+  .step p {
+    margin: 0; font-size: 14px; color: var(--steel);
+  }
+
+  /* ───── CTA / Contact ───── */
+  .contact-band {
+    background: var(--grass);
+    color: #fff;
+    padding: 56px 22px;
+    text-align: center;
+  }
+  .contact-band .inner { max-width: 720px; margin: 0 auto; }
+  .contact-band h2 {
+    margin: 0 0 12px; font-size: 32px; font-weight: 800;
+    line-height: 1.1; letter-spacing: -0.01em;
+  }
+  .contact-band p {
+    margin: 0 auto 24px; font-size: 17px;
+    max-width: 580px;
+    opacity: 0.95;
+  }
+  .contact-band .actions {
+    display: flex; gap: 12px; justify-content: center;
+    flex-wrap: wrap;
+  }
+  .contact-band .cta { background: var(--clay); }
+  .contact-band .cta:hover { background: #a9672e; }
+  .contact-band .cta.sms {
+    background: #fff; color: var(--grass);
+  }
+  .contact-band .cta.sms:hover { background: var(--clay-soft); }
+  .contact-band .phone-big {
+    display: block;
+    font-size: 36px; font-weight: 800;
+    color: #fff; text-decoration: none;
+    margin: 12px 0 20px;
+    letter-spacing: -0.01em;
+  }
+  .contact-band .phone-big:hover { color: var(--clay-soft); }
+
+  /* ───── Footer ───── */
+  footer.foot {
+    background: var(--ink);
+    color: #a8b3a8;
+    padding: 28px 22px;
+    text-align: center;
+    font-size: 13px;
+    line-height: 1.5;
+  }
+  footer.foot a { color: var(--grass-2); text-decoration: none; }
+  footer.foot a:hover { color: var(--clay); }
+
+  /* ───── Floating call button (mobile) ───── */
+  .float-call {
+    position: fixed; bottom: 22px; right: 22px;
+    background: var(--clay); color: #fff;
+    padding: 14px 22px;
+    font-size: 14px; font-weight: 700;
+    text-decoration: none;
+    border-radius: 999px;
+    box-shadow: 0 6px 20px rgba(196,122,58,0.4);
+    z-index: 100;
+    display: flex; align-items: center; gap: 8px;
+  }
+  .float-call:hover { background: #a9672e; }
+  @media (min-width: 720px) { .float-call { display: none; } }
+</style>
+</head>
+<body>
+
+<!-- ───── Header ───── -->
+<header class="top">
+  <div class="inner">
+    <div class="mark">
+      <!-- Simple lawn / leaf mark -->
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <path d="M12 22 C12 22 4 17 4 11 C4 5 12 2 12 2 C12 2 20 5 20 11 C20 17 12 22 12 22 Z" fill="#ffffff"/>
+        <path d="M12 22 L12 8" stroke="#2f6b3a" stroke-width="1.5" stroke-linecap="round"/>
+        <path d="M12 14 L8 12 M12 17 L9 16 M12 11 L16 9" stroke="#2f6b3a" stroke-width="1.5" stroke-linecap="round"/>
+      </svg>
+    </div>
+    <div class="name">
+      Barella Lawn &amp; Landscaping
+      <small>Your neighbor · Local · Free estimates</small>
+    </div>
+  </div>
+</header>
+
+<!-- ───── Hero ───── -->
+<section class="hero">
+  <div class="hero-inner">
+    <span class="eyebrow">📍 Local · Trusted · Fair prices</span>
+    <h1>Your yard. <em>Looking its best.</em><br>Without the hassle.</h1>
+    <p class="lead">
+      Whether it's a weekly mow, fresh mulch, decorative rock, or a hedge that's gotten out of control —
+      call or text Blake at <strong>(815) 909-3394</strong> and we'll get it done right.
+    </p>
+    <div class="actions">
+      <a class="cta" href="tel:+18159093394">📞 Call Blake</a>
+      <a class="cta clay" id="sms-link-hero" href="#">💬 Text Blake</a>
+    </div>
+  </div>
+</section>
+
+<main class="wrap">
+
+  <!-- ───── Services ───── -->
+  <section id="services">
+    <header class="sec-h">
+      <span class="eyebrow">What we do</span>
+      <h2>Services we offer</h2>
+      <p>Everything you need to keep your yard looking its best this season — and the next.</p>
+    </header>
+    <div class="services-grid">
+      <article class="service">
+        <h3><span class="check">✓</span> Weekly Lawn Service</h3>
+        <p>Reliable weekly mow, edge, trim, and blow-off. We show up when we say we will and the yard looks clean when we leave.</p>
+      </article>
+      <article class="service">
+        <h3><span class="check">✓</span> Mulch Installation</h3>
+        <p>Fresh mulch — black, brown, or red — delivered and installed. Instant curb-appeal upgrade for any bed or tree ring.</p>
+      </article>
+      <article class="service">
+        <h3><span class="check">✓</span> Rock Installation</h3>
+        <p>Decorative river rock, pea gravel, or limestone. Edged, weed-barriered, and laid the way it'll stay put.</p>
+      </article>
+      <article class="service">
+        <h3><span class="check">✓</span> Bush &amp; Hedge Trimming</h3>
+        <p>Clean, even cuts that keep shrubs healthy and the property looking sharp — without the "puffball" look.</p>
+      </article>
+    </div>
+  </section>
+
+</main>
+
+<!-- ───── About ───── -->
+<section class="about" id="about">
+  <div class="about-inner">
+    <header class="sec-h">
+      <span class="eyebrow">About</span>
+      <h2>Your neighbor, doing this the right way.</h2>
+    </header>
+    <div class="about-grid">
+      <div class="portrait" id="portrait">
+        <span>Photo coming soon</span>
+      </div>
+      <div>
+        <p>
+          I'm Blake Barella, and Barella Lawn &amp; Landscaping is my full-time business serving the local area.
+          I started this because I like the work and I like making a property look good — and because
+          I was tired of seeing the same yards done the same sloppy way every week.
+        </p>
+        <p>
+          Whether you need routine lawn maintenance or want to give your landscaping a fresh new look,
+          I'd be happy to help. Reliable, quality service at fair prices — and I'm easy to get ahold of.
+        </p>
+        <span class="pill">Local</span>
+        <span class="pill">Free estimates</span>
+        <span class="pill">Quick response</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<main class="wrap">
+
+  <!-- ───── How it works ───── -->
+  <section id="how">
+    <header class="sec-h">
+      <span class="eyebrow">How it works</span>
+      <h2>Three easy steps.</h2>
+      <p>No call-center runaround. You talk to Blake, Blake shows up.</p>
+    </header>
+    <div class="steps">
+      <div class="step">
+        <div class="num">1</div>
+        <h4>Reach out</h4>
+        <p>Call or text <strong>(815) 909-3394</strong>. Tell me what you need and roughly when.</p>
+      </div>
+      <div class="step">
+        <div class="num">2</div>
+        <h4>Free estimate</h4>
+        <p>I come by, take a look, and give you a straight quote. No pressure, no upsell.</p>
+      </div>
+      <div class="step">
+        <div class="num">3</div>
+        <h4>Done right</h4>
+        <p>Scheduled weekly or one-time — and finished the way it should have been done in the first place.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ───── Photo gallery ───── -->
+  <section id="work">
+    <header class="sec-h">
+      <span class="eyebrow">Recent work</span>
+      <h2>A few jobs around the neighborhood.</h2>
+      <p>Weekly mows, mulch installs, rock beds, hedge cleanups. Photos coming as we finish them.</p>
+    </header>
+    <div class="gallery">
+      <div class="photo placeholder">1</div>
+      <div class="photo placeholder">2</div>
+      <div class="photo placeholder">3</div>
+      <div class="photo placeholder">4</div>
+      <div class="photo placeholder">5</div>
+      <div class="photo placeholder">6</div>
+    </div>
+    <p style="text-align: center; margin-top: 24px; font-size: 14px; color: var(--steel);">
+      <em>Drop Blake's photos into the <code>photos/</code> folder to fill this gallery.</em>
+    </p>
+  </section>
+
+</main>
+
+<!-- ───── CTA band ───── -->
+<section class="contact-band" id="contact">
+  <div class="inner">
+    <h2>Ready to get started?</h2>
+    <p>Call or text Blake today for a free estimate. Most replies within the hour during the day.</p>
+    <a class="phone-big" href="tel:+18159093394">(815) 909-3394</a>
+    <div class="actions">
+      <a class="cta" href="tel:+18159093394">📞 Call now</a>
+      <a class="cta sms" id="sms-link-band">💬 Text Blake</a>
+    </div>
+    <p style="margin-top: 28px; font-size: 13px; opacity: 0.7;">
+      Barella Lawn &amp; Landscaping · Local · Free estimates · Insured
+    </p>
+  </div>
+</section>
+
+<!-- ───── Floating mobile CTA ───── -->
+<a class="float-call" href="tel:+18159093394">📞 Call Blake</a>
+
+<!-- ───── Footer ───── -->
+<footer class="foot">
+  <p>
+    <strong>Barella Lawn &amp; Landscaping</strong> · Blake Barella<br>
+    <a href="tel:+18159093394">(815) 909-3394</a><br><br>
+    Local lawn care &amp; landscaping · Weekly service, mulch, rock, bush &amp; hedge trimming<br>
+    Free estimates · Fair prices · Reliable
+  </p>
+  <p style="margin-top: 18px; font-size: 11px; opacity: 0.6;">
+    Site built as a courtesy by a neighbor · Always confirm scope and price before work begins
+  </p>
+</footer>
+
+<script>
+  // ───── Prefilled SMS link ─────
+  // Universal SMS URL — works on iOS and Android.
+  // Opens the user's default texting app with phone pre-filled
+  // and a friendly, editable message.
+  (function() {
+    var PHONE = "18159093394";                // E.164 (no +)
+    var BODY  = encodeURIComponent(
+      "Hi Blake! I saw your site and I'd like a free estimate. " +
+      "Could you give me a call or text me back when you get a chance? " +
+      "Thanks!"
+    );
+    var HREF  = "sms:+1" + PHONE + "?body=" + BODY;
+    // iOS Safari sometimes ignores the + in the first segment; use the no-plus form.
+    var HREF_IOS = "sms:" + PHONE + "&body=" + BODY;
+    document.querySelectorAll("a[id^='sms-link']").forEach(function(a) {
+      a.setAttribute("href", HREF);
+      // iOS fallback (most modern Safari accepts the + form, but harmless to retry)
+      a.addEventListener("click", function(e) {
+        var ua = navigator.userAgent;
+        if (/iPhone|iPad|iPod/.test(ua)) {
+          e.preventDefault();
+          window.location.href = HREF_IOS;
+        }
+      });
+    });
+  })();
+
+  // ───── Photo slot fill (when Bill drops photos into photos/) ─────
+  // If photos are present, this will swap the placeholder divs for real images.
+  // Pattern: photos/01.jpg, photos/02.jpg ... photos/06.jpg
+  (function() {
+    var slots = document.querySelectorAll(".gallery .photo");
+    var captions = [
+      "Weekly mow · clean edges",
+      "Fresh black mulch · tree rings",
+      "River rock bed · weed-barriered",
+      "Hedge cleanup · even cuts",
+      "Mulch refresh · before & after",
+      "Decorative rock install"
+    ];
+    slots.forEach(function(s, i) {
+      var n = String(i + 1).padStart(2, "0");
+      var img = new Image();
+      img.onload = function() {
+        s.style.backgroundImage = "url('photos/" + n + ".jpg')";
+        s.classList.remove("placeholder");
+        s.textContent = "";
+        var cap = document.createElement("div");
+        cap.className = "cap";
+        cap.textContent = captions[i] || "Recent work";
+        s.appendChild(cap);
+      };
+      img.onerror = function() {
+        // leave as placeholder
+      };
+      img.src = "photos/" + n + ".jpg?" + Date.now();
+    });
+    // Portrait
+    var portrait = document.getElementById("portrait");
+    if (portrait) {
+      var pimg = new Image();
+      pimg.onload = function() {
+        portrait.style.backgroundImage = "url('photos/blake.jpg')";
+        portrait.classList.add("has-photo");
+        portrait.textContent = "";
+      };
+      pimg.src = "photos/blake.jpg?" + Date.now();
+    }
+  })();
+</script>
+</body>
+</html>
