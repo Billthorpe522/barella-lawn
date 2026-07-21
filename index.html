@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-<meta name="theme-color" content="#2f6b3a">
+<meta name="theme-color" content="#ffffff">
 <title>Barella Lawn & Landscaping · Blake Barella · Call or text (815) 909-3394</title>
 <meta name="description" content="Local lawn care and landscaping in your neighborhood. Weekly lawn service, mulch, rock, bush & hedge trimming. Call or text Blake at (815) 909-3394 for a free estimate.">
 <meta property="og:title" content="Barella Lawn & Landscaping">
@@ -42,30 +42,31 @@
 
   /* ───── Header ───── */
   header.top {
-    background: var(--grass);
-    color: var(--white, #fff);
+    background: #ffffff;
+    color: var(--ink);
     padding: 18px 22px;
     border-bottom: 4px solid var(--clay);
+    box-shadow: var(--shadow-1);
   }
   header.top .inner {
     max-width: 880px; margin: 0 auto;
-    display: flex; align-items: center; gap: 14px;
+    display: flex; align-items: center; gap: 18px;
   }
-  header.top .mark {
-    width: 44px; height: 44px;
-    background: rgba(255,255,255,0.18);
-    display: flex; align-items: center; justify-content: center;
+  header.top .logo {
+    width: 72px; height: 72px;
     flex-shrink: 0;
+    background: url('photos/logo.png') center/contain no-repeat;
   }
   header.top .name {
     font-size: 15px; font-weight: 700;
     letter-spacing: 0.04em; line-height: 1.2;
     text-transform: uppercase;
+    color: var(--ink);
   }
   header.top .name small {
     display: block; font-size: 11px;
     letter-spacing: 0.12em; font-weight: 400;
-    opacity: 0.85; margin-top: 2px;
+    opacity: 0.7; margin-top: 2px;
   }
 
   /* ───── Hero ───── */
@@ -341,14 +342,7 @@
 <!-- ───── Header ───── -->
 <header class="top">
   <div class="inner">
-    <div class="mark">
-      <!-- Simple lawn / leaf mark -->
-      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-        <path d="M12 22 C12 22 4 17 4 11 C4 5 12 2 12 2 C12 2 20 5 20 11 C20 17 12 22 12 22 Z" fill="#ffffff"/>
-        <path d="M12 22 L12 8" stroke="#2f6b3a" stroke-width="1.5" stroke-linecap="round"/>
-        <path d="M12 14 L8 12 M12 17 L9 16 M12 11 L16 9" stroke="#2f6b3a" stroke-width="1.5" stroke-linecap="round"/>
-      </svg>
-    </div>
+    <div class="logo" role="img" aria-label="Barella Lawn &amp; Landscaping logo"></div>
     <div class="name">
       Barella Lawn &amp; Landscaping
       <small>Your neighbor · Local · Free estimates</small>
