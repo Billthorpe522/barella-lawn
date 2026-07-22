@@ -340,7 +340,8 @@
   footer.foot a { color: var(--grass-2); text-decoration: none; }
   footer.foot a:hover { color: var(--clay); }
 
-  /* ───── Floating call button (mobile) ───── */
+  /* ───── Floating mobile CTA (removed) ─────
+     If we ever want it back, uncomment below and the matching <a> in the body.
   .float-call {
     position: fixed; bottom: 22px; right: 22px;
     background: var(--clay); color: #fff;
@@ -354,6 +355,7 @@
   }
   .float-call:hover { background: #a9672e; }
   @media (min-width: 720px) { .float-call { display: none; } }
+  */
 </style>
 </head>
 <body>
@@ -514,8 +516,9 @@
   </div>
 </section>
 
-<!-- ───── Floating mobile CTA ───── -->
-<a class="float-call" href="tel:+18159093394">📞 Call Blake</a>
+<!-- Floating mobile CTA removed — Bill found it distracting.
+     Re-enable by uncommenting the .float-call CSS and the line below. -->
+<!-- <a class="float-call" href="tel:+181****3394">📞 Call Blake</a> -->
 
 <!-- ───── Footer ───── -->
 <footer class="foot">
