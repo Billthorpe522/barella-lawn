@@ -4,6 +4,9 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
 <meta name="theme-color" content="#ffffff">
+<link rel="icon" type="image/x-icon" href="favicon.ico">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
+<link rel="apple-touch-icon" href="favicon-32.png">
 <title>Barella Lawn & Landscaping · Blake Barella · Call or text (815) 909-3394</title>
 <meta name="description" content="Local lawn care and landscaping in your neighborhood. Weekly lawn service, mulch, rock, bush & hedge trimming. Call or text Blake at (815) 909-3394 for a free estimate.">
 <meta property="og:title" content="Barella Lawn & Landscaping">
@@ -196,16 +199,24 @@
     border: 4px solid #fff;
     box-shadow: var(--shadow-2);
     display: flex; align-items: flex-end; justify-content: center;
-    padding-bottom: 16px;
+    padding-bottom: 0;
     color: var(--steel);
-    font-size: 12px; letter-spacing: 0.08em; text-transform: uppercase;
-    font-weight: 600;
+    position: relative;
+  }
+  .portrait > span {
+    display: block;
+    width: 100%;
+    background: rgba(255,255,255,0.92);
+    padding: 10px 12px;
+    font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase;
+    font-weight: 700; color: var(--ink);
+    text-align: center;
   }
   .portrait.has-photo {
     background-image: url('photos/blake.jpg');
     background-size: cover;
-    color: transparent;
   }
+  .portrait.has-photo > span { display: none; }
   .about h3 {
     margin: 0 0 12px;
     font-size: 26px; font-weight: 800; color: var(--ink);
@@ -223,10 +234,12 @@
   /* ───── Photo gallery ───── */
   .gallery {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 12px;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 14px;
+    max-width: 720px;
+    margin: 0 auto;
   }
-  @media (max-width: 540px) { .gallery { grid-template-columns: repeat(2, 1fr); } }
+  @media (max-width: 540px) { .gallery { grid-template-columns: repeat(2, 1fr); gap: 10px; } }
   .photo {
     aspect-ratio: 4 / 3;
     background: var(--grass-soft) center/cover no-repeat;
@@ -430,9 +443,6 @@
         <div class="portrait" id="portrait">
           <span>Photo coming soon</span>
         </div>
-        <p style="text-align: center; margin: 10px 0 0; font-size: 11px; color: var(--steel); text-transform: uppercase; letter-spacing: 0.1em; font-weight: 600;">
-          Your neighbor · Blake
-        </p>
       </div>
       <div>
         <p>
