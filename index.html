@@ -8,9 +8,9 @@
 <link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
 <link rel="apple-touch-icon" href="favicon-32.png">
 <title>Barella Lawn & Landscaping · Blake Barella · BarellaLawnCare.com</title>
-<meta name="description" content="Local lawn care and landscaping in your neighborhood. Weekly lawn service, mulch, rock, bush & hedge trimming. Call or text Blake at (815) 909-3394 for a free estimate. Find us online at BarellaLawnCare.com.">
+<meta name="description" content="Local lawn care and landscaping in your neighborhood. Weekly lawn service, mulch, rock, bush & hedge trimming. Text Blake for a free estimate. Find us online at BarellaLawnCare.com.">
 <meta property="og:title" content="Barella Lawn & Landscaping · BarellaLawnCare.com">
-<meta property="og:description" content="Local lawn care and landscaping. Weekly lawn service, mulch, rock, bush & hedge trimming. Call or text Blake at (815) 909-3394 for a free estimate. Find us online at BarellaLawnCare.com.">
+<meta property="og:description" content="Local lawn care and landscaping. Weekly lawn service, mulch, rock, bush & hedge trimming. Text Blake for a free estimate. Find us online at BarellaLawnCare.com.">
 <meta property="og:type" content="business.business">
 <meta property="og:url" content="https://barellalawncare.com/">
 <meta property="og:site_name" content="BarellaLawnCare.com">
@@ -417,10 +417,10 @@
     <h1>Your yard. <em>Looking its best.</em><br>Without the hassle.</h1>
     <p class="lead">
       Whether it's a weekly mow, fresh mulch, decorative rock, or a hedge that's gotten out of control —
-      call or text Blake at <strong>(815) 909-3394</strong> and we'll get it done right.
+      text Blake below for a free estimate — easy, no pressure.
     </p>
     <div class="actions">
-      <a class="cta" href="tel:+18159093394">📞 Call Blake</a>
+      <a class="cta call-blake" href="#" role="button">📞 Call Blake</a>
       <a class="cta clay" id="sms-link-hero" href="#">💬 Text Blake</a>
     </div>
   </div>
@@ -501,7 +501,7 @@
       <div class="step">
         <div class="num">1</div>
         <h4>Reach out</h4>
-        <p>Call or text <strong>(815) 909-3394</strong>. Tell me what you need and roughly when.</p>
+        <p>Tap the button below — text Blake what you need and roughly when. Most replies within the hour during the day.</p>
       </div>
       <div class="step">
         <div class="num">2</div>
@@ -540,10 +540,10 @@
 <section class="contact-band" id="contact">
   <div class="inner">
     <h2>Ready to get started?</h2>
-    <p>Call or text Blake today for a free estimate. Most replies within the hour during the day.</p>
-    <a class="phone-big" href="tel:+18159093394">(815) 909-3394</a>
+    <p>Text Blake today for a free estimate. Most replies within the hour during the day.</p>
+    <a class="phone-big call-blake" href="#" role="button">📞 Tap to call Blake</a>
     <div class="actions">
-      <a class="cta" href="tel:+18159093394">📞 Call now</a>
+      <a class="cta call-blake" href="#" role="button">📞 Call now</a>
       <a class="cta sms" id="sms-link-band">💬 Text Blake</a>
     </div>
     <p style="margin-top: 28px; font-size: 13px; opacity: 0.7;">
@@ -556,15 +556,15 @@
 </section>
 
 <!-- Floating mobile CTA removed — Bill found it distracting.
-     Re-enable by uncommenting the .float-call CSS and the line below. -->
-<!-- <a class="float-call" href="tel:+181****3394">📞 Call Blake</a> -->
+     Re-enable by uncommenting the .float-call CSS and the matching <a>
+     (the <a> href needs an E.164 tel: link, not a number hidden in source). -->
 
 <!-- ───── Footer ───── -->
 <footer class="foot">
   <div class="footer-logo" role="img" aria-label="Barella Lawn &amp; Landscaping logo"></div>
   <p>
     <strong>Barella Lawn &amp; Landscaping</strong> · Blake Barella<br>
-    <a href="tel:+181****3394">(815) 909-3394</a><br>
+    <a href="#" class="call-blake" role="button">📞 Tap to call Blake</a><br>
     <a href="https://barellalawncare.com/" style="color: var(--clay); font-weight: 700;">BarellaLawnCare.com</a><br><br>
     Local lawn care &amp; landscaping · Weekly service, mulch, rock, bush &amp; hedge trimming<br>
     Free estimates · Fair prices · Reliable
@@ -575,29 +575,59 @@
 </footer>
 
 <script>
-  // ───── Prefilled SMS link ─────
-  // Universal SMS URL — works on iOS and Android.
-  // Opens the user's default texting app with phone pre-filled
-  // and a friendly, editable message.
+  // ───── Phone obfuscation ─────
+  // The phone is stored as a base64-encoded, reversed string so it isn't a
+  // scraper-readable pattern (10 digits in `\d{3}\s?\d{3}\s?\d{4}` form) in
+  // the HTML or JS source. Decoded at runtime in the browser.
+  // Defense level: moderate — defeats naïve bots (the kind that scraped
+  // Blake's number originally), not a determined human with DevTools.
   (function() {
-    var PHONE = "18159093394";                // E.164 (no +)
-    var BODY  = encodeURIComponent(
+    // The actual 10-digit number is encoded below. To regenerate after a
+    // number change: take the new E.164-without-plus string, reverse it,
+    // then base64-encode and paste the result into PHONE_B64.
+    var PHONE_B64 = "NDkzMzkwOTUxODE=";
+
+    function decodePhone() {
+      try {
+        var reversed = atob(PHONE_B64);
+        return reversed.split('').reverse().join('');
+      } catch (e) {
+        return '';
+      }
+    }
+
+    var PHONE = decodePhone();   // 10-digit E.164 without leading +
+
+    // ───── Prefilled SMS link (text Blake) ─────
+    var BODY = encodeURIComponent(
       "Hi Blake! I saw your site and I'd like a free estimate. " +
       "Could you give me a call or text me back when you get a chance? " +
       "Thanks!"
     );
-    var HREF  = "sms:+1" + PHONE + "?body=" + BODY;
-    // iOS Safari sometimes ignores the + in the first segment; use the no-plus form.
-    var HREF_IOS = "sms:" + PHONE + "&body=" + BODY;
+    var SMS_HREF     = "sms:+1" + PHONE + "?body=" + BODY;
+    var SMS_HREF_IOS = "sms:"   + PHONE + "&body=" + BODY;
+
     document.querySelectorAll("a[id^='sms-link']").forEach(function(a) {
-      a.setAttribute("href", HREF);
-      // iOS fallback (most modern Safari accepts the + form, but harmless to retry)
+      a.setAttribute("href", SMS_HREF);
       a.addEventListener("click", function(e) {
         var ua = navigator.userAgent;
         if (/iPhone|iPad|iPod/.test(ua)) {
           e.preventDefault();
-          window.location.href = HREF_IOS;
+          window.location.href = SMS_HREF_IOS;
         }
+      });
+    });
+
+    // ───── Click-time tel: builder ─────
+    // Anchor tags with class="call-blake" get their href set at click time
+    // (decoded from PHONE_B64 inside the handler), so the static HTML never
+    // contains the digits. Scrapers crawling the page never see the number.
+    document.querySelectorAll("a.call-blake").forEach(function(a) {
+      var number = decodePhone();
+      a.addEventListener("click", function(e) {
+        if (!number) return;                  // number didn't decode; let default action happen
+        e.preventDefault();
+        window.location.href = "tel:" + number;
       });
     });
   })();
